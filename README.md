@@ -6,4 +6,4 @@ Under certain circumstances upon entering Arx, you will no longer have access to
 
 ## Download
 + [Steam Workshop](https://steamcommunity.com/sharedfiles/filedetails/?id=1252609992)
-+ [GitHub Releases]()
++ [GitHub Releases](https://github.com/eklundchristopher/DOS2-Arx-Hall-of-Echoes-Waypoint/releases)
