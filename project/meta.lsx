@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<save>
+    <header version="2" time="1514761764" />
+    <version major="3" minor="1" revision="5" build="0" />
+    <region id="MetaData">
+        <node id="root">
+            <attribute id="Module" value="dbe70215-f476-452a-8aee-1575ce76d56f" type="23" />
+            <attribute id="Name" value="HallOfEchoesTeleporter" type="23" />
+            <attribute id="Type" value="Add-on" type="23" />
+            <attribute id="UUID" value="80d3b17d-e6b6-485c-ae0a-cb87d9f8b6da" type="23" />
+        </node>
+    </region>
+</save>
