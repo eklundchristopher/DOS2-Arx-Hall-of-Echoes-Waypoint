@@ -1,0 +1,32 @@
+Version 1
+SubGoalCombiner SGC_AND
+INITSECTION
+DB_WaypointInfo((ITEMGUID)ITEMGUID_S_ARX_WAYP_HoE_B_f95efae5-9371-4f25-bc42-5f6f1d27ffaa,(TRIGGERGUID)TRIGGERGUID_S_ARX_WAYP_HoE_B_Trigger_7a8850cf-c19f-44b7-8ece-0b8cfbe07d20,"WAYP_ARX_HoE_B");
+KBSECTION
+// Register the forced waypoint
+IF
+DB_WaypointInfo((ITEMGUID)ITEMGUID_S_ARX_WAYP_HoE_B_f95efae5-9371-4f25-bc42-5f6f1d27ffaa,(TRIGGERGUID)TRIGGERGUID_S_ARX_WAYP_HoE_B_Trigger_7a8850cf-c19f-44b7-8ece-0b8cfbe07d20,"WAYP_ARX_HoE_B")
+THEN
+RegisterWaypoint("WAYP_ARX_HoE_B", (ITEMGUID)ITEMGUID_S_ARX_WAYP_HoE_B_f95efae5-9371-4f25-bc42-5f6f1d27ffaa);
+
+
+// Delete the forced waypoint once you get to a specific place in Hall of Echoes
+IF
+CharacterEnteredTrigger(_Character, (TRIGGERGUID)TRIGGERGUID_S_ARX_WAYP_HoE_B_Event_ddeb0269-99ce-4b1d-b729-b0297732d922)
+AND
+CharacterIsPlayer(_Character, 1)
+THEN
+LockWaypoint("WAYP_ARX_HoE_B", _Character);
+
+
+// Re-add the forced waypoint if you re-use the waypoint shrine
+IF
+CharacterUsedItem(_Character, (ITEMGUID)ITEMGUID_S_ARX_WAYP_HoE_B_f95efae5-9371-4f25-bc42-5f6f1d27ffaa)
+AND
+CharacterIsPlayer(_Character, 1)
+THEN
+UnlockWaypoint("WAYP_ARX_HoE_B", (TRIGGERGUID)TRIGGERGUID_S_ARX_WAYP_HoE_B_Trigger_7a8850cf-c19f-44b7-8ece-0b8cfbe07d20, _Character);
+EXITSECTION
+
+ENDEXITSECTION
+ParentTargetEdge "__Start"
