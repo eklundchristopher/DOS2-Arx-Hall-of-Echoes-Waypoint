@@ -7,3 +7,23 @@ Under certain circumstances upon entering Arx, you will no longer have access to
 ## Download
 + [Steam Workshop](https://steamcommunity.com/sharedfiles/filedetails/?id=1252609992)
 + [GitHub Releases](https://github.com/eklundchristopher/DOS2-Arx-Hall-of-Echoes-Waypoint/releases)
+
+
+## Building
+### Step 1
+```bash
+git clone https://github.com/eklundchristopher/DOS2-Arx-Hall-of-Echoes-Waypoint.git
+```
+
+### Step 2
+Move the contents of `project/` over to `C:\Program Files (x86)\Steam\steamapps\common\Divinity Original Sin 2\Data\Projects\HallOfEchoesTeleporter`.
+
+### Step 3
+Move the contents of `src/` over to `C:\Program Files (x86)\Steam\steamapps\common\Divinity Original Sin 2\Data\Mods\HallOfEchoesTeleporter_dbe70215-f476-452a-8aee-1575ce76d56f`.
+
+### Step 4
+Launch `Divinity Engine 2` and load the `HallOfEchoesTeleporter` project.
+
+### Step 5
+Open the `Story Editor` and hit `File > Build and Reload`.
+
